@@ -77,7 +77,9 @@ function TopAnime() {
             <div key={i} className="card">
               <p>{element.title}</p>
               <img src={element.images.jpg.image_url} alt={element.title} />
-              <p>{element.episodes}</p>
+              <p>EPISODES : {element.episodes}</p>
+              <p>SCORE : {element.score}</p>
+              <p>STUDIO : {element.studios[0].name}</p>
               <Link to={"anime/" + element.mal_id}>
                 <button>PLUS D'INFOS</button>
               </Link>

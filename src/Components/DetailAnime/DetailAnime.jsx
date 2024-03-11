@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import './DetailAnime.css'
 
 function DetailAnime() {
 
   // DECLARATION useState()
   const [animeDetails, setAnimeDetails] = useState(null)
   const [opening, setOpening] = useState(null)
+  // DECLARATION useParams()
   const { id } = useParams()
 
   // IMPORT DEUX API
