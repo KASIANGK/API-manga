@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import './App.css'
 import TopAnime from '../src/Components/TopAnime/TopAnime'
@@ -13,7 +12,7 @@ function App() {
 const routeur = createBrowserRouter([
   {
     path: '/',
-    element: <TopAnime></TopAnime>
+    element: <TopAnime />
   },
   {
     path: '/anime/:id',
@@ -35,9 +34,10 @@ const routeur = createBrowserRouter([
 
 
 
+
+
   return (
-    <div>
-      <h1>hello</h1>
+    <div className='all'>
       <RouterProvider router={routeur}></RouterProvider>
     </div>
   )

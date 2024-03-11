@@ -1,0 +1,7 @@
+.top-anime {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15%;
+}

@@ -1,6 +1,9 @@
 function DetailManga() {
+
+
     return (
         <div>
+            <p>test detail manga</p>
 
         </div>
     )
