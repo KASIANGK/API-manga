@@ -28,6 +28,21 @@ function DetailManga() {
           <p>{mangaDetails.title}</p>
           <img src={mangaDetails.images.jpg.image_url}/>
           <p>{mangaDetails.synopsis}</p>
+          <p>{mangaDetails.title_japanese}</p>
+          <p>GENRES : </p>
+          {mangaDetails.genres.map((element, i) => (
+            <span key={i}>
+              {element.name}
+            </span>
+          ))}
+          <p>STATUS : {mangaDetails.status}</p>
+          <p>DATES : {mangaDetails.published.string}</p>
+          <p>ATHORS : </p>
+          {mangaDetails.authors.map((element, i) => (
+            <span key={i}>
+              {element.name}
+            </span>
+          ))}
         </div>
       ) : (
         <p>OOOPS</p>
