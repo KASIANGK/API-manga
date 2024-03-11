@@ -1,0 +1,14 @@
+.characters img {
+    width: 200px;
+}
+.characters {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.characters div {
+    width: 200px;
+}

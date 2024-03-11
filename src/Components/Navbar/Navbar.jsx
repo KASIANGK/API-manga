@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import './Navbar.css'
+import logo from '../../assets/OTAK.png'
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo-container">
-          {/* <img src={logo} /> */}
+          <img src={logo} />
       </div>
       <ul className="nav-links">
         <li>

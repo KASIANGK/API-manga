@@ -1,7 +1,37 @@
 .navbar {
-    width: 100%;
-    
+    width: 100%; 
 }
 .nav li {
     width: 20px;
+}
+.logo-container {
+    width: 200px;
+}
+.logo-container img{
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #333; 
+    padding: 10px;
+}
+
+.nav-links {
+    list-style-type: none; 
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 30px; 
+}
+
+.nav-links li a {
+    text-decoration: none; 
+    color: white; 
+}
+
+.nav-links li a:hover {
+    color: red; 
 }

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Navbar from "../Navbar/Navbar";
+import './Characters.css'
 
 function Characters() {
 
@@ -23,17 +25,20 @@ function Characters() {
 
     // BODY COMPONENT Characters
     return (
-        <div>
-            {charactersCharged ? (
-                characters.map((element, i) => (
-                    <div key={i}>
-                        <p>{element.name}</p>
-                        <img src={element.images.jpg.image_url}/>
-                    </div>
-                ))
-            ) : (
-                <p>OOOPS</p>
-            )}
+        <div className="characters-all">
+            <Navbar></Navbar>
+            <div className="characters">
+                {charactersCharged ? (
+                    characters.map((element, i) => (
+                        <div key={i}>
+                            <p>{element.name}</p>
+                            <img src={element.images.jpg.image_url}/>
+                        </div>
+                    ))
+                ) : (
+                    <p>OOOPS</p>
+                )}
+            </div>
         </div>
     )
 }
