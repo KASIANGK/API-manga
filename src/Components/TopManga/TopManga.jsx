@@ -8,13 +8,12 @@ function TopManga() {
 
     const [topManga, setTopManga] = useState([])
     const [searchedWord, setSearchedWord] = useState("")
-    const [filteredAnimeData, setFilteredAnimeData] = useState([])
 
 
     useEffect(() => {
     const importData = async () => {
         try {
-        const topMangaResponse = await fetch(`https://api.jikan.moe/v4/top/anime`)
+        const topMangaResponse = await fetch(`https://api.jikan.moe/v4/top/manga`)
         const topMangaJson = await topMangaResponse.json()
         setTopManga(topMangaJson.data)
 
@@ -46,7 +45,18 @@ function TopManga() {
                             <div key={i} className="card">
                                 <p>{element.title}</p>
                                 <img src={element.images.jpg.image_url} />
-                                <Link to={"manga/" + element.mal_id}>
+                                <p>VOLUMES : {element.volumes}</p>
+                                <p>SCORE : {element.score}</p>
+                                {element.studios && element.studios.length > 0 && (
+                                    <p>STUDIO : {element.studios[0].name}</p>
+                                )}
+                                <p>AUTHORS :</p>
+                                <ul>
+                                    {element.authors.map((author, j) => (
+                                        <li key={j}>{author.name}</li>
+                                    ))}
+                                </ul>
+                                <Link to={"/manga/" + element.mal_id}>
                                     <button>PLUS D'INFOS</button>  
                                 </Link>
                             </div>

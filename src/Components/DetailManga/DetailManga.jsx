@@ -26,7 +26,7 @@ function DetailManga() {
       {mangaDetails ? ( 
         <div className="detail-manga">
           <p>{mangaDetails.title}</p>
-          <img src={mangaDetails.images.jpg.image_url} alt={mangaDetails.title} />
+          <img src={mangaDetails.images.jpg.image_url}/>
           <p>{mangaDetails.synopsis}</p>
         </div>
       ) : (
