@@ -95,7 +95,7 @@ function TopAnime() {
     setSelectedFilter(event.target.value)
   }
 
-//   const getFilteredAnime = () => {
+//   const handleFilteredAnime = () => {
 //     if (selectedFilter === "all") {
 //       return topAnime.filter((anime) => anime.title.toLowerCase().includes(searchedWord.toLowerCase()))
 //     } else if (selectedFilter === "episods12") {
