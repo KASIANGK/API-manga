@@ -44,11 +44,14 @@ function TopAnime() {
       }
       return filteredAnime
     }
+    
   
   // BODY DU COMPONENT TopAnime
   return (
     <div className="top-anime-all">
-      <Navbar></Navbar>
+      <div className="nav">
+        <Navbar></Navbar>
+      </div>
       {topAnime.length > 0 ? (
         <Searchbar
           topAnime={topAnime}
