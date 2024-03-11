@@ -4,7 +4,7 @@ function TopAnime() {
 
     return (
         <div>
-            <h1>back</h1>
+            <h1>Top Anime</h1>
         </div>
     )
 }
