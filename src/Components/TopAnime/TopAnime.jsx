@@ -24,21 +24,23 @@ function TopAnime() {
 
 
     return (
-        <div className="top-anime">
+        <div className="top-anime-all">
             <h1>Top Anime</h1>
-            {topAnime.length > 0 ? (
-                topAnime.map((element, i) => (
-                    <div key={i}>
-                        <p>{element.title}</p>
-                        <img src={element.images.jpg.image_url} />
-                        <Link to={"anime/" + element.mal_id}>
-                            <button>PLUS D'INFOS</button>  
-                        </Link>
-                    </div>
-                ))
-            ) : (
-                <p>OOPS</p>
-            )}
+                <div className="top-anime">
+                    {topAnime.length > 0 ? (
+                        topAnime.map((element, i) => (
+                            <div key={i} className="card">
+                                <p>{element.title}</p>
+                                <img src={element.images.jpg.image_url} />
+                                <Link to={"anime/" + element.mal_id}>
+                                    <button>PLUS D'INFOS</button>  
+                                </Link>
+                            </div>
+                        ))
+                    ) : (
+                        <p>OOPS</p>
+                    )}
+                </div>
         </div>
     )
 }
