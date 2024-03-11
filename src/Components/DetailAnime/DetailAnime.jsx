@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 function DetailAnime() {
   const [animeDetails, setAnimeDetails] = useState(null)
@@ -22,6 +23,7 @@ function DetailAnime() {
 
   return (
     <div>
+      <Navbar></Navbar>
       <p>Detail Anime</p>
       {animeDetails ? ( 
         <div className="detail-anime">

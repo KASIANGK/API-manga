@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import './TopAnime.css'
 import { Link } from "react-router-dom"
+import Navbar from "../Navbar/Navbar"
 
 function TopAnime() {
 
@@ -25,6 +26,7 @@ function TopAnime() {
 
     return (
         <div className="top-anime-all">
+            <Navbar></Navbar>
             <h1>Top Anime</h1>
                 <div className="top-anime">
                     {topAnime.length > 0 ? (

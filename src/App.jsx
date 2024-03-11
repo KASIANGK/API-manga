@@ -5,6 +5,7 @@ import DetailAnime from './Components/DetailAnime/DetailAnime'
 import TopManga from './Components/TopManga/TopManga'
 import DetailManga from './Components/DetailManga/DetailManga'
 import Characters from './Components/Characters/Characters'
+import Navbar from './Components/Navbar/Navbar'
 
 
 function App() {

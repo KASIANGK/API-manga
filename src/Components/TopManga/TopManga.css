@@ -1,0 +1,12 @@
+.top-manga {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15%;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
