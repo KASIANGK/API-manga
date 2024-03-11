@@ -2,7 +2,9 @@ function Characters () {
 
     return (
 
-        <div></div>
+        <div>
+            
+        </div>
     )
 }
 
