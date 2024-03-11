@@ -3,10 +3,13 @@ import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
 function DetailAnime() {
-  const [animeDetails, setAnimeDetails] = useState(null)
 
+  // DECLARATION useState()
+  const [animeDetails, setAnimeDetails] = useState(null)
+  // DECLARATION useParams()
   const { id } = useParams()
 
+  // IMPORT API
   useEffect(() => {
     const importAnimeDetails = async () => {
       try {
@@ -20,7 +23,7 @@ function DetailAnime() {
     importAnimeDetails()
   }, [id])
 
-
+  // BODY COMPONENT DetailAnime
   return (
     <div>
       <Navbar></Navbar>
