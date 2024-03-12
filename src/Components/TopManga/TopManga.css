@@ -1,12 +1,109 @@
 .top-manga {
-    width: 100vw;
+    width: 70%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 15%;
+    justify-content: center;
+    align-items: center;
 }
+
+.top-manga-all {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     width: 200px;
+    transition: filter 0.5s ease; 
+}
+
+
+.top-manga:hover .card:not(:hover) {
+    filter: blur(5px) brightness(30%);
+}
+
+
+.top-manga .card:hover {
+    transform: scale(1.25);
+    z-index: 1;
+}
+.search {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.card a {
+    text-align: left;
+}
+.card p {
+    margin: 1%;
+    text-align: left;
+}
+.card button {
+    margin-top: 15%;
+}
+.intro {
+    width: 100%;
+    background-size: cover;
+    height: 600px;
+}
+.intro img {
+    width: 500px;
+}
+/* CSS */
+.button-32 {
+    background: linear-gradient(to bottom right, #a947ef, #6c80d8);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+  
+  .button-32:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(59, 15, 112, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+  
+  .button-32:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(128, 104, 208, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+
+
+  @media only screen and (max-width: 425px) {
+    .intro {
+        width: 100vw;
+    }
+    .title {
+        width: 100vw;
+    }
+    .top-manga-all {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
 }

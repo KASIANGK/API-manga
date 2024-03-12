@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import './Navbar.css'
-import logo from '../../assets/OTAK.png'
+import logo from '../../assets/TITLE.png'
 
 function Navbar() {
   return (
@@ -10,13 +10,13 @@ function Navbar() {
       </div>
       <ul className="nav-links">
         <li>
-          <Link to="/">Top Anime</Link>
+          <Link to="/">TOP ANIME</Link>
         </li>
         <li>
-          <Link to="/manga">Top Manga</Link>
+          <Link to="/manga">TOP MANGA</Link>
         </li>
         <li>
-          <Link to="/characters">Characters</Link>
+          <Link to="/characters">CHARACTERS</Link>
         </li>
       </ul>
     </nav>

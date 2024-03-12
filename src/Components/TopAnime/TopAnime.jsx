@@ -3,6 +3,11 @@ import './TopAnime.css';
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Searchbar from "../Searchbar/Searchbar";
+import Light from '../../assets/anime-light.webp'
+import Dark from '../../assets/anime-dark.jpeg'
+import Sunset from '../../assets/sunset.avif'
+import BG from '../../assets/lightbg.jpeg'
+import topanime from '../../assets/TOPMM.png'
 
 function TopAnime() {
 
@@ -49,10 +54,12 @@ function TopAnime() {
   // BODY DU COMPONENT TopAnime
   return (
     <div className="top-anime-all">
-      <div className="nav">
-        <Navbar></Navbar>
+      <Navbar></Navbar>
+      <div className="intro"
+      style={{backgroundImage: `url(${BG})`}}>
+        <h1>Top Anime</h1>
+        {/* <img className="title" src={topanime}></img> */}
       </div>
-      <h1>Top Anime</h1>
       <div className="barres">
         {topAnime.length > 0 ? (
           <Searchbar
@@ -68,8 +75,8 @@ function TopAnime() {
         <div className="filters">
           <select value={selectedFilter} onChange={handleFilterChange}>
             <option value="all">All</option>
-            <option value="episods12">12 episods or more</option>
-            <option value="episods24">24 episods or more</option>
+            <option value="episods12">12 episods and less</option>
+            <option value="episods24">24 episods and less</option>
           </select>
         </div>
       </div>
@@ -78,18 +85,18 @@ function TopAnime() {
         {handleFilteredAnime().length > 0 ? (
           handleFilteredAnime().map((element, i) => (
             <div key={i} className="card">
-              <p>{element.title}</p>
+              <h4>{element.title}</h4>
               <img src={element.images.jpg.image_url} alt={element.title} />
-              <p>EPISODES : {element.episodes}</p>
-              <p>SCORE : {element.score}</p>
-              <p>STUDIO : {element.studios[0].name}</p>
+              <p>episodes : {element.episodes}</p>
+              <p>score : {element.score}</p>
+              <p>studio : {element.studios[0].name}</p>
               <Link to={"anime/" + element.mal_id}>
-                <button>PLUS D'INFOS</button>
+                <button className="button-62" role="button">PLUS D'INFOS</button>
               </Link>
             </div>
           ))
           ) : (
-                <p>OOPS</p>
+                <p>WAIT A LITTLE</p>
                     )}
             </div>
         </div>

@@ -1,0 +1,35 @@
+.detail-anime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    /* align-items: center; */
+}
+.img-anime {
+    width: 300px;
+}
+.da {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 10%;
+    align-items: center;
+    padding: 10%;
+}
+.two {
+    padding: 10%;
+    margin-top: -15%;
+}
+/* .detail-anime-one p {
+    width: 300px;
+} */
+.open {
+    margin-top: 15%;
+}
+.end {
+    margin-top: 15%;
+}
+.trailer {
+    margin-top: -10%;
+    margin-bottom: 5%;
+}

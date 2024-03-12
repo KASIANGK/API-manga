@@ -34,54 +34,61 @@ function DetailAnime() {
   return (
     <div>
       <Navbar />
-      <p>Detail Anime</p>
+      {/* <p>Detail Anime</p> */}
 
       {animeDetails ? (
         <div className="detail-anime">
-          <p>{animeDetails.titles[0].title}</p>
-          <p>{animeDetails.title_japanese}</p>
-          <p>SCORE : {animeDetails.score}</p>
-          <p>STUDIO : {animeDetails.studios[0].name}</p>
-          <p>GENRE(S) : 
-            {animeDetails.genres.map((element, i) => (
-              <span key={i}>
-                <p>{element.name}</p>
-              </span>
-            ))}
-          </p>
-          <img src={animeDetails.images.jpg.image_url} />
-          <p>{animeDetails.synopsis}</p>
-
-        
-          {opening && opening.openings.length > 0 && (
-            <div>
-              <p>OPENING :</p>
-              <ul>
-                {opening.openings.map((element, i) => (
-                  <li key={i}>
-                  {element}
-                  </li>
-                ))}
-              </ul>
+          <div className="da">
+            <div className="detail-anime-one">
+              <p>{animeDetails.titles[0].title}</p>
+              <p>{animeDetails.title_japanese}</p>
+              <p>score : {animeDetails.score}</p>
+              <p>studio : {animeDetails.studios[0].name}</p>
+              <p>genre(s) : 
+                <p>{animeDetails.genres.map((element, i) => (
+                  <span key={i}>
+                    <p>{element.name}</p>
+                  </span>
+                ))}</p>
+              </p>
             </div>
-          )}
+            <img className='img-anime' src={animeDetails.images.jpg.image_url} />
+          </div>
+          <div className="two">
+            <p>{animeDetails.synopsis}</p>
 
-          {opening && opening.endings.length > 0 && (
-            <div>
-              <p>ENDING :</p>
-              <ul>
-                {opening.endings.map((element, i) => (
-                  <li key={i}>
-                  {element}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          
+            {opening && opening.openings.length > 0 && (
+              <div className="open">
+                <p>opening :</p>
+                <p>
+                  {opening.openings.map((element, i) => (
+                    <p key={i}>
+                    {element}
+                    </p>
+                  ))}
+                </p>
+              </div>
+            )}
+
+            {opening && opening.endings.length > 0 && (
+              <div className="end">
+                <p>ending :</p>
+                <p>
+                  {opening.endings.map((element, i) => (
+                    <p key={i}>
+                    {element}
+                    </p>
+                  ))}
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       ) : (
         <p>OOOPS</p>
       )}
+      
 
       <div className="trailer">
         {animeDetails ? (
@@ -94,7 +101,7 @@ function DetailAnime() {
         </iframe>
         ) :
         (
-          <p>NO TRAILER</p>
+          <p>OOOPS, ANY AVAILABLE TRAILER</p>
         )}
       </div>
 

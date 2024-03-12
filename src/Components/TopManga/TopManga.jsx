@@ -3,6 +3,8 @@ import './TopManga.css'
 import { Link } from "react-router-dom"
 import Navbar from "../Navbar/Navbar"
 import Searchbar from "../Searchbar/Searchbar"
+import BACK from '../../assets/darkbg.jpeg'
+import TOPMM from '../../assets/TOPCC.png'
 
 function TopManga() {
 
@@ -29,35 +31,39 @@ function TopManga() {
     return (
         <div className="top-manga-all">
             <Navbar></Navbar>
+            <div className="intro"
+            style={{backgroundImage: `url(${BACK})`}}>
+                <h1>Top Manga</h1>
+                {/* <img className="title" src={TOPMM}></img> */}
+            </div>
+            <div className="search">
             {topManga.length > 0 ? (
                 <Searchbar 
             topManga={topManga} setTopManga={setTopManga}
             searchedWord={searchedWord} setSearchedWord={setSearchedWord}></Searchbar>
             ) : <p>LOADING</p>
             }
-
-            <h1>Top Manga</h1>
-            <h2>{searchedWord}</h2>
+            </div>
                 <div className="top-manga">
                     {topManga.length > 0 ? (
                         topManga.map((element, i) => (
                             element.title.toLowerCase().includes(searchedWord.toLowerCase()) ? 
                             <div key={i} className="card">
-                                <p>{element.title}</p>
+                                <h4>{element.title}</h4>
                                 <img src={element.images.jpg.image_url} />
-                                <p>VOLUMES : {element.volumes}</p>
-                                <p>SCORE : {element.score}</p>
+                                <p>volumes : {element.volumes}</p>
+                                <p>score : {element.score}</p>
                                 {element.studios && element.studios.length > 0 && (
-                                    <p>STUDIO : {element.studios[0].name}</p>
+                                    <p>studio : {element.studios[0].name}</p>
                                 )}
-                                <p>AUTHORS :</p>
-                                <ul>
+                                <p>authors :</p>
+                                <p>
                                     {element.authors.map((author, j) => (
-                                        <li key={j}>{author.name}</li>
+                                        <p key={j}>{author.name}</p>
                                     ))}
-                                </ul>
+                                </p>
                                 <Link to={"/manga/" + element.mal_id}>
-                                    <button>PLUS D'INFOS</button>  
+                                    <button className="button-32" role="button">PLUS D'INFOS</button>  
                                 </Link>
                             </div>
                             : ''

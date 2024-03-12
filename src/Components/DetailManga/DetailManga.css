@@ -1,0 +1,24 @@
+.detail-manga {
+    width: 700px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.manga-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.detail-manga img {
+    margin-bottom: 5%;
+}
+.detail-manga h3 {
+    margin-bottom: 5%;
+}
+@media only screen and (max-width: 425px) {
+    .detail-manga {
+        width: 400px;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+}

@@ -8,7 +8,48 @@
     gap: 10%;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
 .characters div {
     width: 200px;
+    margin-bottom: 5%;
+}
+.introOK {
+    width: 100%;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 80% 40%;
+}
+.introOK h1 {
+    color: rgb(0, 0, 0);
+    
+}
+.titleOK {
+    width: 700px;
+    margin-top: -10%;
+}
+.titleOK img {
+    width: 800px;
+}
+
+
+.character-container {
+    position: relative;
+    display: inline-block;
+}
+
+.character-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+    text-align: center;
 }

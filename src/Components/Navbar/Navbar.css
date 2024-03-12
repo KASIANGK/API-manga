@@ -1,11 +1,12 @@
 .navbar {
     width: 100%; 
+    overflow-x: hidden;
 }
 .nav li {
     width: 20px;
 }
 .logo-container {
-    width: 200px;
+    width: 300px;
 }
 .logo-container img{
     width: 100%;
@@ -16,6 +17,7 @@
     align-items: center; 
     background-color: #33333318; 
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 .nav-links {
@@ -40,4 +42,29 @@
 }
 .nav-links li a:hover {
     color: red; 
+}
+
+
+@media only screen and (max-width: 425px) {
+    .nav-links {
+        list-style-type: none; 
+        display: flex;
+        gap: 20px;
+    }
+    .navbar {
+        width: 100%; 
+        padding: 0%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav-links {
+        list-style-type: none; 
+        display: flex;
+        gap: 20px;
+    }
+    .navbar {
+        width: 100%; 
+        padding: 0%;
+    }
 }

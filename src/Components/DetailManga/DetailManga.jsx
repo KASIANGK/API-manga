@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import './DetailManga.css'
 
 function DetailManga() {
   const [mangaDetails, setMangaDetails] = useState(null)
@@ -22,12 +23,12 @@ function DetailManga() {
 
 
   return (
-    <div>
+    <div className="manga-all">
       <Navbar></Navbar>
-      <p>Detail Manga</p>
+      {/* <p>Detail Manga</p> */}
       {mangaDetails ? ( 
         <div className="detail-manga">
-          <p>{mangaDetails.title}</p>
+          <h3>{mangaDetails.title}</h3>
           <img src={mangaDetails.images.jpg.image_url}/>
           <p>{mangaDetails.synopsis}</p>
           <p>{mangaDetails.title_japanese}</p>
@@ -47,7 +48,7 @@ function DetailManga() {
           ))}
         </div>
       ) : (
-        <p>OOOPS</p>
+        <p>WAIT A LITTLE</p>
       )}
     </div>
   )
