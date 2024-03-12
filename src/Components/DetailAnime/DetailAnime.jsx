@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import './DetailAnime.css'
+import blackback from '../../assets/blackback.jpeg'
 
 function DetailAnime() {
 
@@ -40,7 +41,7 @@ function DetailAnime() {
         <div className="detail-anime">
           <div className="da">
             <div className="detail-anime-one">
-              <p>{animeDetails.titles[0].title}</p>
+              <p className="titre-og">{animeDetails.titles[0].title}</p>
               <p>{animeDetails.title_japanese}</p>
               <p>score : {animeDetails.score}</p>
               <p>studio : {animeDetails.studios[0].name}</p>
@@ -57,32 +58,34 @@ function DetailAnime() {
           <div className="two">
             <p>{animeDetails.synopsis}</p>
 
-          
-            {opening && opening.openings.length > 0 && (
-              <div className="open">
-                <p>opening :</p>
-                <p>
-                  {opening.openings.map((element, i) => (
-                    <p key={i}>
-                    {element}
-                    </p>
-                  ))}
-                </p>
-              </div>
-            )}
+            <div className="op"
+            style={{backgroundImage: `url(${blackback})`}}>
+              {opening && opening.openings.length > 0 && (
+                <div className="open">
+                  <p className="open-title">OPENING :</p>
+                  <p>
+                    {opening.openings.map((element, i) => (
+                      <p key={i}>
+                      {element}
+                      </p>
+                    ))}
+                  </p>
+                </div>
+              )}
 
-            {opening && opening.endings.length > 0 && (
-              <div className="end">
-                <p>ending :</p>
-                <p>
-                  {opening.endings.map((element, i) => (
-                    <p key={i}>
-                    {element}
-                    </p>
-                  ))}
-                </p>
-              </div>
-            )}
+              {opening && opening.endings.length > 0 && (
+                <div className="end">
+                  <p className="end-title">ENDING :</p>
+                  <p>
+                    {opening.endings.map((element, i) => (
+                      <p key={i}>
+                      {element}
+                      </p>
+                    ))}
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       ) : (
@@ -92,7 +95,7 @@ function DetailAnime() {
 
       <div className="trailer">
         {animeDetails ? (
-          <iframe
+          <iframe className="yt-trailer"
           width='560'
           height='315'
           src={animeDetails.trailer.embed_url}

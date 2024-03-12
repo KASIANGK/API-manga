@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import './Characters.css'
 import BACKG from '../../assets/PERSO.jpeg'
 import TOPCC from '../../assets/TOPAA.png'
+import PERSO from '../../assets/anime.webp'
 
 function Characters() {
 
@@ -46,6 +47,10 @@ function Characters() {
                     <p>WAIT A LITTLE</p>
                 )}
             </div>
+            {/* <div className='imgCharacters'
+            style={{backgroundImage: `url(${PERSO})`}}>
+
+            </div> */}
         </div>
     )
 }

@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     padding: 10%;
-    /* align-items: center; */
+    margin-top: -10%;
+    align-items: center;
 }
 .img-anime {
     width: 300px;
@@ -11,25 +12,102 @@
 .da {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: start;
+    justify-content: center;
+    text-align: left;
     gap: 10%;
     align-items: center;
-    padding: 10%;
+    padding: 5%;
+    border: 1px solid white;
+    margin-top: 3%;
+    width: 800px;
 }
 .two {
     padding: 10%;
-    margin-top: -15%;
+    margin-top: -5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 /* .detail-anime-one p {
     width: 300px;
 } */
 .open {
-    margin-top: 15%;
+    margin-top: 0%;
+    background-color: rgba(0, 0, 0, 0.735);
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 5%;
+    width: 100vw;
+    padding-top: 5%;
 }
 .end {
-    margin-top: 15%;
+    margin-top: -5%;
+    background-color: rgba(0, 0, 0, 0.735);
+    padding-bottom: 5%;
+    width: 100vw;
 }
 .trailer {
-    margin-top: -10%;
+    margin-top: 5%;
     margin-bottom: 5%;
+    
+}
+
+.titre-og {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    height: 50px;
+    text-align: center;
+    padding: 5%;
+}
+.op {
+    width: 100vw;
+    height: 450px;
+    background-size: cover;
+    margin-top: 5%;
+}
+.yt-trailer {
+    border: 0px;
+}
+.open-title {
+        font-family: "Slackside One", cursive;
+        font-weight: 400;
+        font-style: normal;      
+        font-size: 2em;
+}
+
+.end-title {
+    font-family: "Slackside One", cursive;
+    font-weight: 400;
+    font-style: normal;  
+    font-size: 2em;    
+}
+
+
+@media only screen and (max-width: 425px) {
+    .da {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: left;
+        gap: 10%;
+        align-items: center;
+        padding: 5%;
+        border: 1px solid white;
+        margin-top: 3%;
+        width: 300px;
+    }
+    .trailer {
+        margin-top: -10%;
+        margin-bottom: 5%;
+        width: 200px;
+    }
+    .ytp-cued-thumbnail-overlay-image {
+        width: 200px;
+    }
+    .yt-trailer {
+        width: 420px;
+    }
 }

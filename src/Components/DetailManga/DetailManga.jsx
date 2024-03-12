@@ -32,15 +32,15 @@ function DetailManga() {
           <img src={mangaDetails.images.jpg.image_url}/>
           <p>{mangaDetails.synopsis}</p>
           <p>{mangaDetails.title_japanese}</p>
-          <p>GENRES : </p>
+          <p>genres : </p>
           {mangaDetails.genres.map((element, i) => (
             <span key={i}>
               {element.name}
             </span>
           ))}
-          <p>STATUS : {mangaDetails.status}</p>
-          <p>DATES : {mangaDetails.published.string}</p>
-          <p>ATHORS : </p>
+          <p>status : {mangaDetails.status}</p>
+          <p>dates : {mangaDetails.published.string}</p>
+          <p>authors : </p>
           {mangaDetails.authors.map((element, i) => (
             <span key={i}>
               {element.name}
