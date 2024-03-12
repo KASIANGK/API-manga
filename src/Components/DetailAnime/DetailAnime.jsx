@@ -82,6 +82,22 @@ function DetailAnime() {
       ) : (
         <p>OOOPS</p>
       )}
+
+      <div className="trailer">
+        {animeDetails ? (
+          <iframe
+          width='560'
+          height='315'
+          src={animeDetails.trailer.embed_url}
+          allowFullScreen
+        >
+        </iframe>
+        ) :
+        (
+          <p>NO TRAILER</p>
+        )}
+      </div>
+
     </div>
   )
 }

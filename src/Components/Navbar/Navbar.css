@@ -21,17 +21,23 @@
 .nav-links {
     list-style-type: none; 
     display: flex;
+    gap: 120px;
+}
+.nav-links ul {
+    width: 100%;
 }
 
 .nav-links li {
-    margin-right: 30px; 
+    margin-right: 50px; 
 }
 
 .nav-links li a {
     text-decoration: none; 
     color: white; 
 }
-
+.nav-links a {
+    width: 400px;
+}
 .nav-links li a:hover {
     color: red; 
 }

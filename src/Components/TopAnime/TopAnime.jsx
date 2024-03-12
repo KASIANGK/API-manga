@@ -52,26 +52,26 @@ function TopAnime() {
       <div className="nav">
         <Navbar></Navbar>
       </div>
-      {topAnime.length > 0 ? (
-        <Searchbar
-          topAnime={topAnime}
-          setTopAnime={setTopAnime}
-          searchedWord={searchedWord}
-          setSearchedWord={setSearchedWord}
-        />
-      ) : (
-        <p>LOADING</p>
-      )}
-
       <h1>Top Anime</h1>
-      <h2>{searchedWord}</h2>
+      <div className="barres">
+        {topAnime.length > 0 ? (
+          <Searchbar
+            topAnime={topAnime}
+            setTopAnime={setTopAnime}
+            searchedWord={searchedWord}
+            setSearchedWord={setSearchedWord}
+          />
+        ) : (
+          <p>WAIT A LITTLE</p>
+        )}
 
-      <div className="filters">
-        <select value={selectedFilter} onChange={handleFilterChange}>
-          <option value="all">All</option>
-          <option value="episods12">12 episods or more</option>
-          <option value="episods24">24 episods or more</option>
-        </select>
+        <div className="filters">
+          <select value={selectedFilter} onChange={handleFilterChange}>
+            <option value="all">All</option>
+            <option value="episods12">12 episods or more</option>
+            <option value="episods24">24 episods or more</option>
+          </select>
+        </div>
       </div>
 
       <div className="top-anime">

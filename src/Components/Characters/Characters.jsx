@@ -5,8 +5,8 @@ import './Characters.css'
 function Characters() {
 
     // DECLARATION useState
-    const [characters, setCharacters] = useState([]);
-    const [charactersCharged, setCharactersCharged] = useState(false);
+    const [characters, setCharacters] = useState([])
+    const [charactersCharged, setCharactersCharged] = useState(false)
 
     //IMPORT API
     useEffect(() => {
