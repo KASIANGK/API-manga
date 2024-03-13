@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/KASIANGK/API-manga.git",
+  "homepage": "https://kasiangk.github.io/API-manga/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
