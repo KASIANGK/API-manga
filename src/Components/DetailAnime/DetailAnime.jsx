@@ -7,7 +7,7 @@ import lowdown from '../../assets/LOWDOWN.png'
 import description from '../../assets/DESC.png'
 import good from '../../assets/G2K.png'
 import trai from '../../assets/TRAI.png'
-import testbg from '../../assets/test-bg-2.jpg'
+import testbg from '../../assets/test-bg-3.jpg'
 import { Link } from "react-router-dom";
 
 
@@ -138,7 +138,7 @@ function DetailAnime() {
           </div>
         </div>
       ) : (
-        <p>OOOPS</p>
+        <p>WAIT A LITTLE</p>
       )}
       
 

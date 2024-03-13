@@ -31,25 +31,29 @@ function DetailManga() {
       {mangaDetails ? ( 
         <div className="detail-manga">
           <div className="detail-intro">
-            <h3>{mangaDetails.title}</h3>
-            <img src={mangaDetails.images.jpg.image_url}/>
-            
-            <p>status : {mangaDetails.status}</p>
-            <p>dates : {mangaDetails.published.string}</p>
-            <p>authors : </p>
-            {mangaDetails.authors.map((element, i) => (
-              <p key={i}>
-                {element.name}
-              </p>
-            ))}
+            <div className="intro-manga">
+              <h3>{mangaDetails.title}</h3>
+              <p>{mangaDetails.title_japanese}</p>
+              <img src={mangaDetails.images.jpg.image_url}/>
+            </div>
+            <div className="intro2-manga">
+              <div className="intro-space"></div>
+              <p>status : {mangaDetails.status}</p>
+              <p>dates : {mangaDetails.published.string}</p>
+              <p>authors : </p>
+              {mangaDetails.authors.map((element, i) => (
+                <p key={i}>
+                  {element.name}
+                </p>
+              ))}
 
-            <p>{mangaDetails.title_japanese}</p>
-            <p>genres : </p>
-            {mangaDetails.genres.map((element, i) => (
-              <p id='genres-manga' key={i}>
-                {element.name}
-              </p>
-            ))}
+              <p>genres : </p>
+              {mangaDetails.genres.map((element, i) => (
+                <p id='genres-manga' key={i}>
+                  {element.name}
+                </p>
+              ))}
+            </div>
           </div>
           <p>{mangaDetails.synopsis}</p>
 
