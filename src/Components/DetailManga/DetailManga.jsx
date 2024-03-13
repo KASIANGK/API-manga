@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import './DetailManga.css'
+import backgroundmanga from '../../assets/bg-dark.jpeg'
 
 function DetailManga() {
   const [mangaDetails, setMangaDetails] = useState(null)
@@ -25,31 +26,38 @@ function DetailManga() {
   return (
     <div className="manga-all">
       <Navbar></Navbar>
-      {/* <p>Detail Manga</p> */}
+      <div className="manga-back"
+      style={{backgroundImage: `url(${backgroundmanga})`}}>
       {mangaDetails ? ( 
         <div className="detail-manga">
-          <h3>{mangaDetails.title}</h3>
-          <img src={mangaDetails.images.jpg.image_url}/>
+          <div className="detail-intro">
+            <h3>{mangaDetails.title}</h3>
+            <img src={mangaDetails.images.jpg.image_url}/>
+            
+            <p>status : {mangaDetails.status}</p>
+            <p>dates : {mangaDetails.published.string}</p>
+            <p>authors : </p>
+            {mangaDetails.authors.map((element, i) => (
+              <p key={i}>
+                {element.name}
+              </p>
+            ))}
+
+            <p>{mangaDetails.title_japanese}</p>
+            <p>genres : </p>
+            {mangaDetails.genres.map((element, i) => (
+              <p id='genres-manga' key={i}>
+                {element.name}
+              </p>
+            ))}
+          </div>
           <p>{mangaDetails.synopsis}</p>
-          <p>{mangaDetails.title_japanese}</p>
-          <p>genres : </p>
-          {mangaDetails.genres.map((element, i) => (
-            <span key={i}>
-              {element.name}
-            </span>
-          ))}
-          <p>status : {mangaDetails.status}</p>
-          <p>dates : {mangaDetails.published.string}</p>
-          <p>authors : </p>
-          {mangaDetails.authors.map((element, i) => (
-            <span key={i}>
-              {element.name}
-            </span>
-          ))}
+
         </div>
       ) : (
         <p>WAIT A LITTLE</p>
       )}
+      </div>
     </div>
   )
 }

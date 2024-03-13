@@ -49,22 +49,26 @@ function TopManga() {
                         topManga.map((element, i) => (
                             element.title.toLowerCase().includes(searchedWord.toLowerCase()) ? 
                             <div key={i} className="card">
-                                <h4>{element.title}</h4>
+                                <div className="card-title">
+                                    <h4>{element.title}</h4>
+                                </div>
                                 <img src={element.images.jpg.image_url} />
-                                <p>volumes : {element.volumes}</p>
-                                <p>score : {element.score}</p>
-                                {element.studios && element.studios.length > 0 && (
-                                    <p>studio : {element.studios[0].name}</p>
-                                )}
-                                <p>authors :</p>
-                                <p>
-                                    {element.authors.map((author, j) => (
-                                        <p key={j}>{author.name}</p>
-                                    ))}
-                                </p>
-                                <Link to={"/manga/" + element.mal_id}>
-                                    <button className="button-32" role="button">PLUS D'INFOS</button>  
-                                </Link>
+                                <div className="card-txt">
+                                    <p>volumes : {element.volumes}</p>
+                                    <p>score : {element.score}</p>
+                                    {element.studios && element.studios.length > 0 && (
+                                        <p>studio : {element.studios[0].name}</p>
+                                    )}
+                                    <p>authors :</p>
+                                    <p>
+                                        {element.authors.map((author, j) => (
+                                            <p key={j}>{author.name}</p>
+                                        ))}
+                                    </p>
+                                    <Link to={"/manga/" + element.mal_id}>
+                                        <button className="button-32" role="button">PLUS D'INFOS</button>  
+                                    </Link>
+                                </div>
                             </div>
                             : ''
               

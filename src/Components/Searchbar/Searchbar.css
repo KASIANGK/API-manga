@@ -1,0 +1,13 @@
+::placeholder {
+  font-style: italic;
+  font-size: 1.2em;
+  color: rgb(150, 150, 150);
+  background: rgb(0, 0, 0);
+  padding: 5px;
+}
+
+.inp {
+  height: 30px;
+  border: 1px grey solid;
+  border-radius: 10px;
+}

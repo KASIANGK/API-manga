@@ -15,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .card {
@@ -60,6 +61,7 @@
     justify-content: center;
     align-items: center;
     background: fixed;
+    background-position: center center;
 }
 .intro h1 {
     color: white;
@@ -100,7 +102,31 @@
 .button-62:not([disabled]):hover {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
+.filters select {
+    height: 35px;
+    background-color: black;
+}
+.barres input {
+    height: 30px;
+}
+select {
+    border-radius: 10px;
 
+}
+.barres {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+select option[value="1"] {
+    background: rgba(250, 250, 250, 0.3);
+  }
+
+.pagination {
+    display: flex;
+    gap: 10%;
+    margin-bottom: 5%;
+}
 @media only screen and (max-width: 425px) {
     .intro {
         width: 100vw;

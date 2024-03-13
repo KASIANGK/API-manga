@@ -15,6 +15,11 @@ function TopAnime() {
   const [topAnime, setTopAnime] = useState([])
   const [searchedWord, setSearchedWord] = useState("")
   const [selectedFilter, setSelectedFilter] = useState("all")
+  const [currentPage, setCurrentPage] = useState(1)
+  
+  const itemsPerPage = 6
+
+
 
   // IMPORT API 
   useEffect(() => {
@@ -47,7 +52,10 @@ function TopAnime() {
       } else {
         filteredAnime = []
       }
-      return filteredAnime
+      const startIndex = (currentPage - 1) * itemsPerPage
+      const endIndex = startIndex + itemsPerPage
+
+      return filteredAnime.slice(startIndex, endIndex)
     }
     
   
@@ -87,17 +95,28 @@ function TopAnime() {
             <div key={i} className="card">
               <h4>{element.title}</h4>
               <img src={element.images.jpg.image_url} alt={element.title} />
-              <p>episodes : {element.episodes}</p>
-              <p>score : {element.score}</p>
-              <p>studio : {element.studios[0].name}</p>
-              <Link to={"anime/" + element.mal_id}>
-                <button className="button-62" role="button">PLUS D'INFOS</button>
-              </Link>
+              <div className="card-txt"> 
+                <p>episodes : {element.episodes}</p>
+                <p>score : {element.score}</p>
+                <p>studio : {element.studios[0].name}</p>
+                <Link to={"anime/" + element.mal_id}>
+                  <button className="button-62" role="button">PLUS D'INFOS</button>
+                </Link>
+              </div> 
             </div>
           ))
           ) : (
                 <p>WAIT A LITTLE</p>
                     )}
+            </div>
+            <div className="pagination">
+              <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
+                PREV
+              </button>
+              <span>{currentPage}</span>
+              <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage * itemsPerPage >= topAnime.length}>
+                NEXT
+              </button>
             </div>
         </div>
      )

@@ -3,6 +3,14 @@ import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import './DetailAnime.css'
 import blackback from '../../assets/blackback.jpeg'
+import lowdown from '../../assets/LOWDOWN.png'
+import description from '../../assets/DESC.png'
+import good from '../../assets/G2K.png'
+import trai from '../../assets/TRAI.png'
+import testbg from '../../assets/test-bg-2.jpg'
+import { Link } from "react-router-dom";
+
+
 
 function DetailAnime() {
 
@@ -35,10 +43,13 @@ function DetailAnime() {
   return (
     <div>
       <Navbar />
-      {/* <p>Detail Anime</p> */}
 
       {animeDetails ? (
-        <div className="detail-anime">
+        <div className="detail-anime"
+        style={{backgroundImage: `url(${testbg})`}}>
+          {/* <div className="lowdown">
+            <img src={lowdown}></img>
+          </div> */}
           <div className="da">
             <div className="detail-anime-one">
               <p className="titre-og">{animeDetails.titles[0].title}</p>
@@ -46,22 +57,45 @@ function DetailAnime() {
               <p>score : {animeDetails.score}</p>
               <p>studio : {animeDetails.studios[0].name}</p>
               <p>genre(s) : 
-                <p>{animeDetails.genres.map((element, i) => (
+                <p className="genres">{animeDetails.genres.map((element, i) => (
                   <span key={i}>
                     <p>{element.name}</p>
                   </span>
                 ))}</p>
               </p>
             </div>
-            <img className='img-anime' src={animeDetails.images.jpg.image_url} />
+            <div className="lowdown-contenair">
+              {/* <img className='lowdown-content' src={lowdown}></img> */}
+              <img className='img-anime' src={animeDetails.images.jpg.image_url} />
+            </div>
           </div>
+          {/* <div className="two-after">
+            <Link to='/'><button>BACK TO MENU</button></Link>
+          </div> */}
           <div className="two">
-            <p>{animeDetails.synopsis}</p>
-
-            <div className="op"
-            style={{backgroundImage: `url(${blackback})`}}>
+            <div className="syno-og">
+              <img className='desc-content' src={description}></img>
+              <p id="syno">{animeDetails.synopsis}</p>
+            </div>
+            <div className="trailer">
+              <img src={trai}></img>
+              {animeDetails ? (
+                <iframe className="yt-trailer"
+                width='860'
+                height='415'
+                src={animeDetails.trailer.embed_url}
+                allowFullScreen
+              >
+              </iframe>
+              ) :
+              (
+                <p>OOOPS, ANY AVAILABLE TRAILER</p>
+              )}
+            </div>
+            <div className="op">
               {opening && opening.openings.length > 0 && (
                 <div className="open">
+                  <img src={good}></img>
                   <p className="open-title">OPENING :</p>
                   <p>
                     {opening.openings.map((element, i) => (
@@ -86,6 +120,21 @@ function DetailAnime() {
                 </div>
               )}
             </div>
+            {/* <div className="trailer">
+              <img src={trai}></img>
+              {animeDetails ? (
+                <iframe className="yt-trailer"
+                width='560'
+                height='315'
+                src={animeDetails.trailer.embed_url}
+                allowFullScreen
+              >
+              </iframe>
+              ) :
+              (
+                <p>OOOPS, ANY AVAILABLE TRAILER</p>
+              )}
+            </div> */}
           </div>
         </div>
       ) : (
@@ -93,7 +142,8 @@ function DetailAnime() {
       )}
       
 
-      <div className="trailer">
+      {/* <div className="trailer">
+        <img src={trai}></img>
         {animeDetails ? (
           <iframe className="yt-trailer"
           width='560'
@@ -106,7 +156,7 @@ function DetailAnime() {
         (
           <p>OOOPS, ANY AVAILABLE TRAILER</p>
         )}
-      </div>
+      </div> */}
 
     </div>
   )

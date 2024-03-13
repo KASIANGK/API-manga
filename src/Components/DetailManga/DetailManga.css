@@ -3,12 +3,24 @@
     margin-bottom: 5%;
     margin-top: 2%;
 }
+.manga-back {
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: fixed;
+}
 .manga-all {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+.manga-all p {
+    letter-spacing: 3px;
+    line-height: 1.5;
+}
+
 .detail-manga img {
     margin-bottom: 5%;
 }

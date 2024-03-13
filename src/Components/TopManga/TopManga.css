@@ -6,23 +6,36 @@
     gap: 15%;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
-
+.input {
+    height: 30px;
+}
 .top-manga-all {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     width: 200px;
+    height: 590px;
     transition: filter 0.5s ease; 
+    margin-bottom: 10%;
 }
-
+.card img {
+    width: auto; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.card-txt {
+    padding-top: 5%;
+}
 
 .top-manga:hover .card:not(:hover) {
     filter: blur(5px) brightness(30%);
@@ -55,13 +68,15 @@
     width: 100%;
     background-size: cover;
     height: 600px;
+    background-position: center center;
+    
 }
 .intro img {
     width: 500px;
 }
 /* CSS */
 .button-32 {
-    background: linear-gradient(to bottom right, #a947ef, #6c80d8);
+    background: linear-gradient(to bottom right, #ef9347, #195169);
     border: 0;
     border-radius: 12px;
     color: #FFFFFF;

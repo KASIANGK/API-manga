@@ -5,6 +5,39 @@
     padding: 10%;
     margin-top: -10%;
     align-items: center;
+    overflow: hidden;
+}
+.detail-anime img {
+    width: 250px;
+}
+/* .detail-anime-one {
+    margin-top: 5%;
+} */
+.lowdown {
+    width: 900px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: flex-start;
+}
+.lowdown img {
+    width: 200px;
+}
+.lowdown-content {
+    width: 150px;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+.lowdown-content {
+    width: 50px;
+    margin-bottom: 25%;
+}
+.lowdown-contenair {
+    display: flex;
+    flex-direction: column;
+}
+.lowdown-contenair img {
+    width: 200px;
 }
 .img-anime {
     width: 300px;
@@ -17,9 +50,25 @@
     gap: 10%;
     align-items: center;
     padding: 5%;
-    border: 1px solid white;
-    margin-top: 3%;
-    width: 800px;
+    /* border: 1px solid white; */
+    box-shadow: 
+        rgba(255, 255, 255, 0.144) 8px -8px 12px 5px,
+        rgba(255, 255, 255, 0.144) 8px 8px 12px 5px;  
+    margin-top: 7%;
+    width: 100vw;
+    background-color: black;
+    height: 300px;
+}
+.desc-content {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.two-after {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .two {
     padding: 10%;
@@ -30,56 +79,93 @@
     align-items: center;
     flex-direction: column;
 }
-/* .detail-anime-one p {
-    width: 300px;
-} */
+.two p {
+    letter-spacing: 3px;
+    line-height: 1.5;
+}
+#syno {
+    margin-bottom: 5%;
+    width: 80%;
+}
+.syno-og {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+.genres {
+    display: flex;
+    gap: 5%;
+}
 .open {
     margin-top: 0%;
-    background-color: rgba(0, 0, 0, 0.735);
+    background-color: rgba(0, 0, 0, 0.939);
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 5%;
     width: 100vw;
     padding-top: 5%;
+    background-size: cover;
 }
 .end {
     margin-top: -5%;
-    background-color: rgba(0, 0, 0, 0.735);
+    background-color: rgb(0, 0, 0);
     padding-bottom: 5%;
     width: 100vw;
 }
 .trailer {
     margin-top: 5%;
     margin-bottom: 5%;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
+.trailer img {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 150px;
+}
 .titre-og {
-    background-color: white;
-    color: black;
+    /* background-color: white; */
+    color: rgb(255, 255, 255);
     font-weight: 700;
-    height: 50px;
+    height: 100px;
     text-align: center;
-    padding: 5%;
+    /* padding: 5%; */
+    /* font-family: "Shadows Into Light", cursive; */
+    font-weight: 400;
+    font-size: 2em; 
+    font-style: normal; 
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: start;
+   
 }
 .op {
     width: 100vw;
-    height: 450px;
+    height: 800px;
     background-size: cover;
     margin-top: 5%;
+    background-position: 50% 30%;
 }
 .yt-trailer {
     border: 0px;
 }
 .open-title {
-        font-family: "Slackside One", cursive;
-        font-weight: 400;
-        font-style: normal;      
-        font-size: 2em;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-size: 2em; 
+    font-style: normal;      
 }
 
 .end-title {
-    font-family: "Slackside One", cursive;
+    font-family: "Shadows Into Light", cursive;
     font-weight: 400;
     font-style: normal;  
     font-size: 2em;    
@@ -98,6 +184,7 @@
         border: 1px solid white;
         margin-top: 3%;
         width: 300px;
+        height: 700px;
     }
     .trailer {
         margin-top: -10%;

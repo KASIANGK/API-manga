@@ -1,23 +1,45 @@
 .characters img {
-    width: 200px;
+    width: 300px;
+    border: none;
+    margin-bottom: 15%;
+    border-radius: 3px;
+    /* box-shadow: 
+    rgba(255, 255, 255, 0.144) 8px -4px 12px 5px,
+    rgba(255, 255, 255, 0.144) 8px 4px 12px 5px;   */
+}
+.character-name {
+    height: 100px;
+    /* font-family: "Shadows Into Light", cursive; */
+    font-weight: 400;
+    font-size: 3em; 
+    font-style: normal; 
+}
+.character-name p {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-size: 3em; 
 }
 .characters {
     display: flex;
+    overflow: hidden;
     width: 100%;
     flex-wrap: wrap;
-    gap: 10%;
+    gap: 11%;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
+    width: 100%;
 }
-.characters div {
+.characters-container {
     width: 200px;
-    margin-bottom: 5%;
+    border: none;
+    /* margin-bottom: 20%; */
 }
+
 .introOK {
     width: 100%;
     background-size: cover;
-    height: 500px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
