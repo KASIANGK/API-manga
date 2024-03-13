@@ -3,13 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://votre-nom-utilisateur.github.io/API-manga/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build",
-    "predeploy" : "npm run build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
   "dependencies": {
     "react": "^18.2.0",
